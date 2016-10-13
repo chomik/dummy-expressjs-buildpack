@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Will set up express.js"
+echo "Dummy express.js server"
 exit 0
 
