@@ -11,4 +11,4 @@ to:
     web: node server
 
 You can customize the path used for server for static files using
-`CUSTOM_STATICS_PATH`. The default is `dist`.
+`CUSTOM_STATICS_PATH` environment variable. The default is `dist`.
