@@ -10,7 +10,9 @@ cat > server.js <<- "EOF"
 var express = require('express');
 var app = express();
 
-app.use('', express.static(__dirname + '/dist'));
+var path = (process.env.CUSTOM_STATICS_PATH || 'dist');
+
+app.use('', express.static(__dirname + '/' + path));
 
 
 var port = (process.env.PORT || 3000);
