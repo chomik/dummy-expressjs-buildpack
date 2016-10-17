@@ -13,6 +13,10 @@ var app = express();
 var path = (process.env.CUSTOM_STATICS_PATH || 'dist');
 
 app.use('', express.static(__dirname + '/' + path));
+app.get('/*', function (req, res, next) {
+    res.status(200);
+    res.sendfile(__dirname + '/' + path + '/index.html');
+  });
 
 
 var port = (process.env.PORT || 3000);
